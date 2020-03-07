@@ -1,6 +1,8 @@
-import org.junit.Test;
+package com.zipcodewilmington.simplecrypt;
 
-import static org.junit.Assert.*;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 public class ROT13Test {
 
@@ -16,7 +18,7 @@ public class ROT13Test {
         String actual = cipher.rotate(s1, 'A');
 
         // Then
-        assertTrue(actual.equals(s2));
+        Assert.assertTrue(actual.equals(s2));
     }
 
     @Test
@@ -30,7 +32,7 @@ public class ROT13Test {
         String actual = cipher.rotate(s1, 'D');
 
         // Then
-        assertTrue(actual.equals(s2));
+        Assert.assertTrue(actual.equals(s2));
     }
 
     @Test
@@ -45,7 +47,7 @@ public class ROT13Test {
         System.out.println(s1);
         System.out.println(actual);
         // Then
-        assertTrue(actual.equals(s2));
+        Assert.assertTrue(actual.equals(s2));
     }
 
     @Test
@@ -64,14 +66,14 @@ public class ROT13Test {
         System.out.println(Q1);
         System.out.println(A1);
         // Then
-        assertTrue(actual.equals(A1));
+        Assert.assertTrue(actual.equals(A1));
 
         // When
         String actual2 = cipher.decrypt(Q2);
         System.out.println(Q2);
         System.out.println(A2);
         // Then
-        assertTrue(actual2.equals(A2));
+        Assert.assertTrue(actual2.equals(A2));
     }
     @Test
     public void cryptTest2() {
@@ -85,7 +87,7 @@ public class ROT13Test {
         String actual = cipher.crypt(cipher.crypt(Q1));
         System.out.println(actual);
         // Then
-        assertTrue(actual.equals(Q1));
+        Assert.assertTrue(actual.equals(Q1));
     }
 
 }
